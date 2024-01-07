@@ -7,6 +7,7 @@ import Dashboard from "./pages/admin/dashboard/Dashboard";
 import Nopage from "./pages/nopage/Nopage";
 import Login from "./pages/registration/Login";
 import SignUp from "./pages/registration/SignUp";
+import ProductInfo from "./pages/productInfo/ProductInfo";
 import MyState from "./context/data/myState";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/productinfo/:id" element={<ProductInfo />} />
           <Route path="/*" element={<Nopage />} />
         </Routes>
       </BrowserRouter>
