@@ -1,4 +1,5 @@
 import React from "react";
+import MyState from "./context/data/myState";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Order from "./pages/order/Order";
@@ -8,7 +9,8 @@ import Nopage from "./pages/nopage/Nopage";
 import Login from "./pages/registration/Login";
 import SignUp from "./pages/registration/SignUp";
 import ProductInfo from "./pages/productInfo/ProductInfo";
-import MyState from "./context/data/myState";
+import AddProduct from "./pages/admin/pages/AddProduct";
+import UpdateProduct from "./pages/admin/pages/UpdateProduct";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/productinfo/:id" element={<ProductInfo />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/updateproduct" element={<UpdateProduct />} />
           <Route path="/*" element={<Nopage />} />
         </Routes>
       </BrowserRouter>
